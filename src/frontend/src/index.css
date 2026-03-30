@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Page bg #F3F5F7 */
+    --background: 0.967 0.006 252;
+    --foreground: 0.165 0.015 262;
+    /* Cards white */
+    --card: 1 0 0;
+    --card-foreground: 0.165 0.015 262;
+    --popover: 1 0 0;
+    --popover-foreground: 0.165 0.015 262;
+    /* Primary = teal #36D1C4 */
+    --primary: 0.78 0.115 188;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.955 0.006 252;
+    --secondary-foreground: 0.165 0.015 262;
+    --muted: 0.955 0.006 252;
+    --muted-foreground: 0.521 0.015 258;
+    --accent: 0.955 0.006 252;
+    --accent-foreground: 0.165 0.015 262;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    /* Border #E6EAF0 */
+    --border: 0.927 0.008 252;
+    --input: 0.927 0.008 252;
+    --ring: 0.78 0.115 188;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.78 0.115 188;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.97 0 0;
+    --sidebar-accent-foreground: 0.205 0 0;
+    --sidebar-border: 0.927 0.008 252;
+    --sidebar-ring: 0.78 0.115 188;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+}
+
+@layer utilities {
+  .gradient-cta {
+    background: linear-gradient(135deg, #6a3df2, #ff5aa5, #ffb14a);
+  }
+  .gradient-cta-text {
+    background: linear-gradient(135deg, #6a3df2, #ff5aa5, #ffb14a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-teal {
+    background-color: #36d1c4;
+  }
+  .emoji-grid-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
